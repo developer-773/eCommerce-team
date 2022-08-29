@@ -17,10 +17,10 @@
   border-radius: 12px;
 }
 
-@mixin txt-format($Ffamily, $Fsize, $Fheight, $Lheight, $color) {
+@mixin txt-format($Ffamily, $Fsize, $Fweight, $Lheight, $color) {
   font-family: $Ffamily;
   font-size: $Fsize;
-  font-weight: $Fheight;
+  font-weight: $Fweight;
   line-height: $Lheight;
   color: $color;
 }
@@ -29,7 +29,9 @@
 @mixin size($size) {
   @if $size == phone {
     @media only screen and (min-width: 320px) { @content; }
-  } @else if $size == tablet{
+  } @else if size == mobile {
+    @media only screen and (max-width: 576px) { @content; }
+  }@else if $size == tablet {
     @media only screen and (min-width: 768px) { @content; }
   } @else if $size == desktop {
     @media only screen and (min-width: 1200px) { @content; }
