@@ -1,0 +1,65 @@
+.gallery {
+    background: #EEE;
+}
+
+.gallery-cell {
+    width: 60%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
+.flickity-page-dots{
+    display: none;
+}
+.flickity-slider{
+    width: 80%;
+    transform: translateX(0%);
+}
+.gallery-cell{
+    width: 47%;
+}
+
+.customers__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.customers__theme{
+    margin: 0;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #151515;
+}
+.customers__btn{
+    position: relative;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #151515;
+    border: none;
+    background-color: transparent;
+}
+.customers__btn::after{
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-image: url("../images/vektor-right-green.svg");
+    background-repeat: no-repeat;
+}
